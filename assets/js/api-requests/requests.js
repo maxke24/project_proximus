@@ -144,6 +144,12 @@ function getChallenges(account_id, cb){
     });
 }
 
+function getAllChallenges(cb){
+    fetchFromServer(`${challengeUrl}`, "GET").then((response) =>{
+        cb(response);
+    });
+}
+
 function getPerson(id, cb){
     fetchFromServer(`${playerUrl}/${id}`, "GET").then((response) =>{
         cb(response);
