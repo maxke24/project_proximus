@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proximus Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/proximus_logo.ico">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/team.css">
+</head>
+<body>
+    <main>
+        <section id="teams">
+            <form>
+                <input type="text" id="searchTeams" placeholder="search for teams or people" autofocus="true" autocomplete="off">
+            </form>
+            <ul>
+                
+            </ul>
+        </section>
+        <div id="line"></div>
+        <section id="team">
+            <form>
+                <input type="text" id="searchPeople" placeholder="search for people in a team" autofocus="true" autocomplete="off">
+            </form>
+            <div id="no-team">
+                <div id="join-team">
+
+                </div>
+                <form id="create-team">
+                    <label for="teamName">team name:</label>
+                    <input type="text" id="teamName">
+                    <input type="submit" value="create team">
+                </form>
+            </div>
+            <ul id="team-members">
+                
+            </ul>
+            <a href="index.html" id="index-button">go back &#8594;</a>
+        </section>
+    </main>
+</body>
+<script src="assets/js/api-requests/config.js"></script>
+<script src="assets/js/api-requests/communication.js"></script>
+<script src="assets/js/api-requests/requests.js"></script>
+<script src="assets/js/team.js"></script>
+</html>

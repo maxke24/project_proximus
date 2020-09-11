@@ -1,0 +1,123 @@
+section{
+    background: white;
+    width: 50%;
+    margin: auto 1rem;
+    height: 85%;
+    font-size: 24px;
+    padding: 1rem;
+    color: #5c2d91;
+    border-radius: 1rem;
+    position: relative;
+    border: 2px solid;
+    overflow: auto;
+}
+
+main{
+    width: 100%;
+    display: inline-flex;
+    height: 100%;
+}
+
+li{
+    padding: 0.5rem;
+}
+
+#name{
+    font-size: 32px;
+    color: #64b7c2;
+    position: sticky;
+    top: 4.2rem;
+    background: white;
+}
+
+#line{
+    background-color: white;
+    height: 85%;
+    width: 5px;
+    margin: auto;
+    border-radius: 0.2rem;
+}
+
+#no-team{
+    display: none;
+}
+
+#no-team div{
+    border-right: 1px solid black;
+}
+
+#no-team div, #no-team form{
+    width: 50%;
+    margin: 1rem;
+}
+
+input{
+    background-color: #F1F3F8;
+    border: 1px solid #c2cbe0;
+    width: 75%;
+    margin: 1rem 0;
+    padding: 9px;
+}
+
+label{
+    margin: 1rem 0;
+}
+
+input[type=submit], #no-team div button{
+    background-color: #5c2d91;
+    font-size: 1rem;
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    color: white;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    position: relative;
+    border: none;
+}
+
+#no-team div button{
+    width: 60%;
+    margin: 0.5rem auto;
+    left: 12.5%;
+}
+
+#challenges{
+    position: absolute;
+    bottom: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #5c2d91;
+}
+
+form{
+    background: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+input{
+    width: 33%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 1px solid #999;
+    outline: none;
+    background: white;
+    border-radius: 1rem;
+    position: sticky;
+    top: 1rem;
+}
+
+#index-button{
+    background-color: #5c2d91;
+    font-size: 1.5rem;
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    border: none;
+    color: white;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}

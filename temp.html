@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proximus game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/proximus_logo.ico">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/level2.css">
+</head>
+<body>
+    <section id="message">
+        <div id="intro">
+            <p>You are in a proximus store.</p>
+            <p>During this level you will get a few customers and based on the information you get, you need to find the right proposal.</p>
+            <p>Try to select the right proposal for the customer!</p>
+            <button value="next" id="next">Let's go!</button>
+        </div>
+        <div id="outro">
+            <p>Thank you for playing!</p>
+            <p>
+                This level shows that we use data in every level of proximus, whether we realise it or not. It also shows that we don't always have enough data to make the right choice.
+            </p>
+            <button value="next">Let's go!</button>
+        </div>
+    </section>
+    <aside>
+    <p id="counter">Time: </p>
+    <p id="score">Score: </p>
+</aside>
+<main>
+    <section>
+        <div id="info">
+            
+        </div>
+        <figure>
+        
+        </figure>
+    </section>
+</main>
+<section id="answers">
+
+</section>
+    
+    
+</body>
+<script src="assets/js/api-requests/config.js"></script>
+<script src="assets/js/api-requests/requests.js"></script>
+<script src="assets/js/api-requests/communication.js"></script>
+<script src="assets/js/possibleAnswers.js"></script>
+<script src="assets/js/customers.js"></script>
+<script src="assets/js/level2.js"></script>
+</html>

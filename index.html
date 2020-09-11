@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="media/proximus_logo.ico">
+    <title>My Account</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+    <section id="personal-information">
+        <div id="info">
+
+        </div>
+        <div>
+            <a href="level1.html">level 1</a>
+            <a href="level2.html">level 2</a>
+            <a href="level3.html">level 3</a>
+            <a href="level4.html">level 4 <span id="level4">Coming soon!</span></a>
+            <a href="level5.html">level 5 <span id="level5">Coming soon!</span></a>
+        </div>
+        <ul id="challenges">
+        </ul>
+    </section>
+    <aside id="team-information">
+        <ul>
+            <li><h1>Teams: </h1></li>
+        </ul>
+        <a href="team.html" id="team-button">Show all teams!</a>
+    </aside>
+    <aside id="team-members">
+        <ul>
+            <li><h1>Members of your team: </h1></li>
+        </ul>
+        <div id="no-team">
+            <div id="join-team">
+
+            </div>
+            <form id="create-team">
+                <label for="teamName">team name:</label>
+                <input type="text" id="teamName">
+                <input type="submit" value="create team">
+            </form>
+        </div>
+    </aside>    
+</body>
+<script src="assets/js/api-requests/config.js"></script>
+<script src="assets/js/api-requests/communication.js"></script>
+<script src="assets/js/api-requests/requests.js"></script>
+<script src="assets/js/index.js"></script>
+</html>

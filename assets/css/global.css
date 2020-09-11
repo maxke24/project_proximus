@@ -1,0 +1,72 @@
+@font-face {
+    font-family: ProximusRegular;
+    src: url(../fonts/Proximus-Regular.woff2);
+  }
+
+  @font-face {
+    font-family: ProximusBold;
+    src: url(../fonts/Proximus-Bold.woff2);
+  }
+
+body, html{
+    height: 100%;
+    font-family: ProximusBold;
+    overflow: hidden;
+}
+
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  background-color: rgb(51, 51, 51);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 0 5rem 5rem 0;
+  border-left: 0;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(100,183,194, 0.5);
+  border-radius: 5rem;
+}
+
+button, a{
+  border: none;
+  text-decoration: none;
+}
+
+#back{
+  position: fixed;
+  margin: 1rem;
+  bottom: 1rem;
+  color: white;
+  background: none;
+  padding: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 1.5rem;
+  border: none;
+}
+
+#yes, #no{
+  position: absolute;
+}
+
+#yes{
+  left: 1rem;
+}
+
+#confirmation{
+  display: none;
+}

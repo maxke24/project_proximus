@@ -1,0 +1,146 @@
+section{
+    background: white;
+    width: 45%;
+    margin: 1rem 1rem;
+    height: 85%;
+    font-size: 24px;
+    padding: 1rem;
+    color: #5c2d91;
+    border-radius: 1rem;
+    position: relative;
+    border: 2px solid;
+}
+
+h1{
+    color: #64b7c2;
+}
+
+aside{
+    height: 38%;
+    background: white;
+    width: 45%;
+    margin: auto 1rem;
+    right: 1rem;
+    font-size: 24px;
+    padding: 1rem;
+    color: #5c2d91;
+    border-radius: 1rem;
+    top: 1rem;
+    position: absolute;
+    border: 2px solid;
+}
+
+#team-members{
+    top: 49%;
+    overflow: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #5c2d91;
+}
+
+#personal-information div{
+    margin: auto;
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    left: 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.disabled{
+    color: grey;
+}
+
+#team-button{
+    background-color: #5c2d91;
+    font-size: 1.5rem;
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    border: none;
+    color: white;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+#challenges{
+    position: absolute;
+    bottom: 3rem;
+}
+
+img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    margin-right: 1rem;
+    border: 2px solid;
+}
+
+figure{
+    display: flex;
+}
+
+figcaption{
+    align-self: center;
+}
+
+#no-team{
+    display: none;
+}
+
+#no-team div{
+    border-right: 1px solid black;
+}
+
+#no-team div, #no-team form{
+    width: 50%;
+    margin: 1rem;
+}
+
+input{
+    background-color: #F1F3F8;
+    border: 1px solid #c2cbe0;
+    width: 75%;
+    margin: 1rem 0;
+    padding: 9px;
+}
+
+label{
+    margin: 1rem 0;
+}
+
+input[type=submit], #no-team div button{
+    background-color: #5c2d91;
+    font-size: 1rem;
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    color: white;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    position: relative;
+}
+
+#no-team div button{
+    width: 60%;
+    margin: 0.5rem auto;
+    left: 12.5%;
+}
+
+span{
+    background: rgba(255, 0, 0, 0.5);
+    font-size: 1rem;
+    color: white;
+    transform: rotate(-19deg);
+    position: absolute;
+}
+
+#level4{
+    right: 11rem;
+}
+
+#level5{
+    right: 2.5rem;
+}

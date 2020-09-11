@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>level 1</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/proximus_logo.ico">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/level1.css">
+</head>
+<body>
+    <button id="back">Go back to home &#8594;</button>
+
+    <section id="message">
+        <div id="intro">
+            <p>You are going to see a stack off pictures, it's up to you to decide which pictures you think are important to answer questions on customer information in phase 2 of this level.</p>
+            <p>It's not going to be easy ;)</p>
+            <button value="next" id="next">Let's go!</button>
+        </div>
+        <div id="middle">
+            <p>Based on the pictures you have chosen, try to answer as many questions as possible!</p>
+            <p>Goodluck!</p>
+            <button value="next" id="next">Let's go!</button>
+        </div>
+        <div id="confirmation">
+            <p>Are you sure you want to quit and loose all progress?</p>
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+        <div id="outro">
+            <p>Thank you for playing!</p>
+            <p>
+                By playing this level we want to show you that it's not always easy to collect all the needed data from our customers.
+            </p>
+            <button value="next">Let's go!</button>
+        </div>
+    </section>
+
+<main id="choose-pictures">
+        <section id="keep">
+            <h1>Keep these pictures: </h1>
+            <div>
+                <button draggable="false">continue with these pictures</button>
+
+            </div>
+        </section>
+        <section id="discard">
+            <h1>Discard these pictures: </h1>
+            <div>
+
+            </div>
+        </section>
+        <section id="all_images">
+
+        </section>
+</main>
+
+<main id="answer-questions">
+    <p id="score">score: </p>
+    <section id="help-pictures">
+        <div>
+        </div>
+    </section>
+    <section id="answers">
+
+
+    </section>
+</main>
+
+</body>
+<script src="assets/js/api-requests/config.js"></script>
+<script src="assets/js/api-requests/communication.js"></script>
+<script src="assets/js/api-requests/requests.js"></script>
+<script src="assets/js/level1.js"></script>
+</html>

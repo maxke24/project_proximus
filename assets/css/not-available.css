@@ -1,0 +1,52 @@
+main{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-filter: url(#blur-filter);
+    filter: url(#blur-filter);
+    -webkit-backdrop-filter: blur(5rem);
+    backdrop-filter: blur(3px);
+}
+
+section{
+    width: 50%;
+    height: 50%;
+    background: white;
+    color: #5c2d91;
+    border-radius: 0.5rem;
+    border: 1px solid #5c2d91;
+    margin: 12.5% auto;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+
+}
+
+section h1{
+    color: #5c2d91;
+    text-align: center;
+    font-size: 4rem;
+    position: relative;
+    align-self: center;
+    width: 100%;
+}
+
+a{
+    background-color: #5c2d91;
+    font-size: 16px;
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    border: 1px solid black;
+    color: white;
+    width: fit-content;
+    padding: 19px 20px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 3</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/proximus_logo.ico">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/level3.css">
+</head>
+<body>
+    <button id="back">Go back to home &#8594;</button>
+    <section id="message">
+        <div id="intro">
+            <p>In this level you are going to do the job of someone who plans the routes for the technicians.</p>
+            <p>Try to find the shortest path between the houses, see if you can beat the computer!</p>
+            <button value="next">Let's go!</button>
+        </div>
+        <div id="confirmation">
+            <p>Are you sure you want to quit and loose all progress?</p>
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+        <div id="outro">
+            <p>Thank you for playing!</p>
+            <p>By doing this level we want you to see how data get's used to determine the shortest and quickest path for a technician to get trough his clients as quick as possible.
+                We want this to lower the cost maintenance for the cars and the gasoline.
+            </p>
+            <button value="next">Continue</button>
+        </div>
+        <div id="beat-opponent">
+            <div id="beaten">
+                <p>Congratulations!</p>
+            </div>
+            <div id="lost">
+                <p>Oh no, you have lost!</p>
+            </div>
+            <div id="tie">
+                <p>Looks like you tied!</p>
+            </div>
+            
+            <button value="next">Continue</button>
+        </div>
+        <div id=challengers-div>
+            <form>
+                <label for="search"></label>
+                <input type="text" id="search" placeholder="search" autofocus>
+                <a href="#" id="close">X</a>
+            </form>
+            
+            <ul id="challengers">
+
+            </ul>
+        </div>
+    </section>
+    <div>
+        <ul>
+            <li><p id="user">Your length: </p></li>
+            <li><p id="computer">Computers length: 0</p></li>
+            <li><a href="#" id="state">Show correct solution!</a></li>
+            <li><a href="#" id="challenge">Challenge someone!</a></li>
+            <li><a id="reset" href="#">reset</a></li>
+            <li><a id="undo" href="#">undo</a></li>
+        </ul>
+        
+    </div>
+    
+</body>
+<script src="assets/js/api-requests/config.js"></script>
+<script src="assets/js/api-requests/communication.js"></script>
+<script src="assets/js/api-requests/requests.js"></script>
+<script src="assets/js/p5.js"></script>
+<script src="assets/js/ga.js"></script>
+<script src="assets/js/level3.js"></script>
+</html>
