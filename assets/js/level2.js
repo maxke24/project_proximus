@@ -140,7 +140,9 @@ function resetCountdown(){
         // interval = setInterval(startCountDown, 1000);
     }else{
         clearInterval(interval);
-        setLevel(account_id, 1);
+        setLevel(account_id, 2);
+        giveScore(score, account_id);
+        addToHistory(account_id, 2, score);
         document.querySelector("#outro").style.display = "block";
         document.querySelector("#message").style.display = "initial";
     }

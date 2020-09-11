@@ -131,6 +131,8 @@ function setup() {
           resetPlayingField();
           e.target.innerHTML = "Show correct solution!";
         } else {
+          resetPlayingField();
+          console.log(totalScore);
           giveScore(totalScore, account_id);
           addToHistory(account_id, 3, totalScore);
           outro.style.display = "block";
@@ -286,6 +288,7 @@ function resetPlayingField() {
     diff = Math.round(userLength / bestLength * 100);
 
   }
+  console.log(diff);
   totalScore += diff;
   fillPoints();
   for (let i = 0; i < popSize; i++) {
