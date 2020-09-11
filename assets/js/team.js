@@ -75,6 +75,10 @@ function getTeams() {
                 teams.push([id, team.name, team.score]);
             }
         fillTeamList(teams);
+        let myTeam = document.querySelector(`#id${teamId}`);
+        if(myTeam){
+            myTeam.style.color = "rgb(255 45 130)";
+        }
     });
 }
 
@@ -179,10 +183,6 @@ function fillTeamList(array){
     document.querySelectorAll("#teams ul li").forEach((el) => {
         el.addEventListener("click", showTeam);
     });
-    let myTeam = document.querySelector(`#id${teamId}`);
-    if(myTeam){
-        myTeam.style.color = "rgb(255 45 130)";
-    }
 }
 
 function fillAllPeople(array, searchText){
