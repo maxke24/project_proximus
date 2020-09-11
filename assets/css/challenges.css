@@ -20,6 +20,8 @@ main{
 
 h1{
     color: #64b7c2;
+    margin-top: 1rem;
+
 }
 
 #index-button{
@@ -30,11 +32,15 @@ h1{
     color: white;
     width: fit-content;
     padding: 1rem 1.2rem;
-    position: absolute;
-    right: 1rem;
+    position: sticky;
     bottom: 1rem;
+    left: 100%;
 }
 
 a{
     color: #5c2d91;
+}
+
+li{
+    margin-top: 0.5rem;
 }

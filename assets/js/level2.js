@@ -7,7 +7,6 @@ let account_id;
 let round = 0;
 let score = 0;
 let interval;
-let oldScore;
 let seconds;
 let counter;
 let section;
@@ -28,10 +27,6 @@ function init(){
 
     tempCustomers = Array.from(customers);
     seconds = 60;
-
-    getScore(account_id, (score) =>{
-        oldScore = score;
-    });
 
     info = document.querySelector("#info");
     figure = document.querySelector("figure");
@@ -84,7 +79,6 @@ function checkAnswers(e){
     e.preventDefault;
     let id = parseInt(e.target.value);
     score += parseInt(tempCustomers[currentCustomer].answers[id]);
-    giveScore(score, account_id);
     scorePlaceholder.innerHTML = "Score: " + score;
     tempCustomers.splice(currentCustomer, 1);
     resetCountdown();
@@ -120,7 +114,9 @@ function startCountDown(){
     if (seconds < 0) {
         counter.innerHTML = "Time's up!";
         clearInterval(interval);
-        setLevel(account_id, 1);
+        setLevel(account_id, 2);
+        giveScore(score, account_id);
+        addToHistory(account_id, 2, score);
         document.querySelector("#outro").style.display = "block";
         document.querySelector("#message").style.display = "initial";
     }

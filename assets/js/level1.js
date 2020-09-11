@@ -179,8 +179,9 @@ function loadAnswers(){
             el.addEventListener("click", checkAnswers);
         });
     }else{
-        setLevel(account_id, 3);
+        setLevel(account_id, 1);
         giveScore(score, account_id);
+        addToHistory(account_id, 1, score);
         document.querySelector("#outro").style.display = "block";
         document.querySelector("#message").style.display = "initial";
     }

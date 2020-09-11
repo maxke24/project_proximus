@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 let pending;
+let played;
 let history;
 let account_id;
 
@@ -15,9 +16,25 @@ function init(){
     }
 
     pending = document.querySelector("#pending ul");
-    history = document.querySelector("#history ul");
+    played = document.querySelector("#played");
+    history = document.querySelector("#history");
 
     fillPending();
+    getHistory(account_id, (response) => {
+        for(let i = 0; i < response.length; i++){
+            let level = response[i].fields.level;
+            let score = response[i].fields.score;
+            let challengerId = response[i].fields.challengerId;
+            if(challengerId){
+                getPerson(challengerId, (person) => {
+                history.innerHTML += `<li>+${score} on level ${level} against ${person.fields.name}</li>`;
+
+                });
+            }else{
+                history.innerHTML += `<li>+${score} on level ${level}</li>`;
+            }
+        }
+    });
 }
 
 function fillPending(){
@@ -34,11 +51,11 @@ function fillPending(){
                 if(done){
                     getPerson(opponent, (person) => {
                         if(winner === account_id){
-                            history.innerHTML += `<li>You have won from ${person.fields.name} on level ${challenge.level}</li>`;
+                            played.innerHTML += `<li>You have won from ${person.fields.name} on level ${challenge.level}</li>`;
                         }else if(winner === 0){
-                            history.innerHTML += `<li>You have tied with ${person.fields.name} on level ${challenge.level}</li>`;
+                            played.innerHTML += `<li>You have tied with ${person.fields.name} on level ${challenge.level}</li>`;
                         }else{
-                            history.innerHTML += `<li>You have lost from ${person.fields.name} on level ${challenge.level}</li>`;
+                            played.innerHTML += `<li>You have lost from ${person.fields.name} on level ${challenge.level}</li>`;
                         }
                         
                     });

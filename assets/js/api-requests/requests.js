@@ -1,6 +1,7 @@
 let playerUrl = `${config.root}/A/records`;
 let teamUrl = `${config.root}/E/records`;
 let challengeUrl = `${config.root}/F/records`;
+let historyUrl = `${config.root}/G/records`;
 let team_id;
 function giveScore(score, account_id){
     getScore(account_id, (oldScore) => {
@@ -188,4 +189,23 @@ function getPeople(cb){
     fetchFromServer(playerUrl, "GET").then((response) => {
         cb(response);
     });
+}
+
+function addToHistory(account_id, level, score, challengerId){
+    let historyBody = [{
+        "fields": {
+            "accountId": account_id,
+            "level": level,
+            "score": score,
+            "challengerId": challengerId
+        }
+    }];
+    fetchFromServer(historyUrl, "POST", historyBody);
+}
+
+function getHistory(account_id, cb){
+    fetchFromServer(`${historyUrl}?filters={"fields":{"accountId":"${account_id}"}}`, "GET").then((response) =>{
+        cb(response);
+    });
+
 }

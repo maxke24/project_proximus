@@ -24,7 +24,7 @@ let searchBox;
 let computer;
 let congrats;
 let bestEver;
-let oldScore;
+let totalScore = 0;
 let userBest;
 let section;
 let beaten;
@@ -90,10 +90,6 @@ function setup() {
 
   challenge = new URLSearchParams(window.location.search).get("challenge");
 
-  getScore(account_id, (score) => {
-    oldScore = score;
-  });
-
   state.addEventListener("click", (e) => {
     e.preventDefault();
     if (challenge === "True") {
@@ -102,20 +98,24 @@ function setup() {
         beaten.innerHTML += `<p>Your score: ${userBest}`;
         beaten.innerHTML += `<p>Opponents score: ${challengeScore}`;
         giveScore(10, account_id);
-      deleteChallenge(id, account_id);
+        deleteChallenge(id, account_id);
+        addToHistory(account_id, 3, 10, challengeId);
 
       }else if(userBest === challengeScore){
         tie.style.display = "block";
         giveScore(5, challengeId);
         giveScore(5, account_id);
-      deleteChallenge(id, 0);
+        deleteChallenge(id, 0);
+        addToHistory(account_id, 3, 5, challengeId);
+        addToHistory(challengeId, 3, 5, account_id);
 
       }else{
         lost.style.display = "block";
         lost.innerHTML += `<p>Your score: ${userBest}`;
         lost.innerHTML += `<p>Opponents score: ${challengeScore}`;
         giveScore(10, challengeId);
-      deleteChallenge(id, challengeId);
+        addToHistory(challengeId, 3, 10, account_id);
+        deleteChallenge(id, challengeId);
 
       }
       congrats.style.display = "block";
@@ -131,6 +131,8 @@ function setup() {
           resetPlayingField();
           e.target.innerHTML = "Show correct solution!";
         } else {
+          giveScore(totalScore, account_id);
+          addToHistory(account_id, 3, totalScore);
           outro.style.display = "block";
           section.style.display = "initial";
         }
@@ -284,8 +286,7 @@ function resetPlayingField() {
     diff = Math.round(userLength / bestLength * 100);
 
   }
-
-  giveScore(diff, account_id);
+  totalScore += diff;
   fillPoints();
   for (let i = 0; i < popSize; i++) {
     population[i] = shuffle(order);
