@@ -118,6 +118,7 @@ input{
     border: none;
     overflow: hidden;
     display: none;
+    height: fit-content;
 }
 
 #beaten p, #lost p, #tie p{

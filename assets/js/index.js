@@ -5,6 +5,7 @@ let account_id;
 let teamInformation;
 let memberInformation;
 let personalInformation;
+let logOut;
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -32,6 +33,11 @@ function init(){
             });
         }
         
+    });
+    document.querySelector("#login").addEventListener("click", (e) => {
+        e.target.preventDefault();
+        // window.sessionStorage.setItem("loggedIn", false);
+        window.location.href = "login.html";
     });
 }
 
@@ -127,5 +133,5 @@ function takeChallenge(e){
     e.target.preventDefault;
     let challenge = e.target.getAttribute("data-id");
     localStorage.setItem("challenge", challenge);
-    window.location = `level2.html?challenge=True`;
+    window.location = `level3.html?challenge=True`;
 }

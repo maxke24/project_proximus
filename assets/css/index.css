@@ -144,3 +144,9 @@ span{
 #level5{
     right: 2.5rem;
 }
+
+#login{
+    position: fixed;
+    top: 6rem;
+    left: 8.4rem;
+}
