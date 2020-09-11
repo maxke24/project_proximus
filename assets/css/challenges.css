@@ -1,0 +1,40 @@
+section{
+    background: white;
+    width: 50%;
+    margin: auto 1rem;
+    height: 85%;
+    font-size: 24px;
+    padding: 1rem;
+    color: #5c2d91;
+    border-radius: 1rem;
+    position: relative;
+    border: 2px solid;
+    overflow: auto;
+}
+
+main{
+    width: 100%;
+    display: inline-flex;
+    height: 100%;
+}
+
+h1{
+    color: #64b7c2;
+}
+
+#index-button{
+    background-color: #5c2d91;
+    font-size: 1.5rem;
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    border: none;
+    color: white;
+    width: fit-content;
+    padding: 1rem 1.2rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+a{
+    color: #5c2d91;
+}

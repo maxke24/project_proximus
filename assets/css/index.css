@@ -129,12 +129,13 @@ input[type=submit], #no-team div button{
     left: 12.5%;
 }
 
-span{
+#level4, #level5{
     background: rgba(255, 0, 0, 0.5);
     font-size: 1rem;
     color: white;
     transform: rotate(-19deg);
     position: absolute;
+    display: initial;
 }
 
 #level4{
@@ -145,8 +146,27 @@ span{
     right: 2.5rem;
 }
 
-#login{
+#login, #challengeLink{
     position: fixed;
     top: 6rem;
     left: 8.4rem;
+}
+
+#challengeLink{
+    top: 8rem;
+}
+
+span{
+    display: none;
+}
+
+.active-challenges{
+    display: initial;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    padding: 0.1rem 0.7rem;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
 }

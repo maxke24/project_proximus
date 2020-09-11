@@ -102,20 +102,25 @@ function setup() {
         beaten.innerHTML += `<p>Your score: ${userBest}`;
         beaten.innerHTML += `<p>Opponents score: ${challengeScore}`;
         giveScore(10, account_id);
+      deleteChallenge(id, account_id);
+
       }else if(userBest === challengeScore){
         tie.style.display = "block";
         giveScore(5, challengeId);
         giveScore(5, account_id);
+      deleteChallenge(id, 0);
+
       }else{
         lost.style.display = "block";
         lost.innerHTML += `<p>Your score: ${userBest}`;
         lost.innerHTML += `<p>Opponents score: ${challengeScore}`;
         giveScore(10, challengeId);
+      deleteChallenge(id, challengeId);
+
       }
       congrats.style.display = "block";
       section.style.display = "initial";
       let id = parseInt(localStorage.getItem("challenge"));
-      deleteChallenge(id);
 
     } else {
       if (start) {

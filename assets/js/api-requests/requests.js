@@ -131,7 +131,8 @@ function sendChallenge(account_id, other, level, path, score){
             "challenged": other,
             "level": level,
             "path": path,
-            "score": score
+            "score": score,
+            "done": "No"
         }
     }];
     fetchFromServer(challengeUrl, "POST", challengeBody);
@@ -162,7 +163,13 @@ function getTeams(cb){
 }
 
 function deleteChallenge(id){
-    fetchFromServer(`${challengeUrl}/${id}"}}`, "DELETE");
+    let body = [{
+        "id": id,
+        "fields": {
+            "done": True
+        }
+    }]
+    fetchFromServer(`${challengeUrl}"}}`, "POST", body);
 }
 
 function getMembers(id, cb){

@@ -23,16 +23,11 @@ function init(){
 
     getChallenges(account_id, (response) => {
         for (let i = 0; i < response.length; i++) {
-            let challenge = response[i].fields;
-            let challenger = challenge.challenger;
-            getPerson(challenger, (person) => {
-                document.querySelector("#challenges").innerHTML += `<li><a href="#" data-id="${response[i].id}">${person.fields.name} challenges you for level ${challenge.level}</a></li>`;
-                document.querySelectorAll("#challenges li a").forEach((el) => {
-                    el.addEventListener("click", takeChallenge);
-                });
-            });
+            let done = response[i].fields.done;
+            if(!done){
+                document.querySelector("#challengeLink > span").classList.add("active-challenges");
+            }
         }
-        
     });
     document.querySelector("#login").addEventListener("click", (e) => {
         e.target.preventDefault();
@@ -104,8 +99,6 @@ function fillAside(response, htmlElement){
         let classification = findClassification(response);
         let before = classification - 5;
         let after = classification + 5;
-        console.log(classification, response.length);
-        console.log(before, after);
         if(before < 0){
             after += Math.abs(before);
             before = 0;
@@ -113,7 +106,6 @@ function fillAside(response, htmlElement){
             before -= Math.abs(after) - response.length;
             after = response.length;
         }
-        console.log(before, after);
         for(let i = before; i < after; i++){
             htmlElement.innerHTML += `<li id="id${response[i].id}">${i + 1}. ${response[i].fields.name} | ${response[i].fields.score}</li>`;
         }
